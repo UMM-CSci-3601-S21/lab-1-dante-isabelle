@@ -4,12 +4,12 @@ Be sure to follow the setup instructions in the [README.md](README.md) to set up
 GitHub pages (including changing the line in the `Running your project` section of
 the [README.md](README.md) to link to your team's GitHub pages page).
 
-* [Summary](#summary)
-* [Extending the HTML](#extending-the-html)
-* [Add CSS for the new HTML](#add-css-for-the-new-html)
-* [Create a new CSS file](#create-a-new-css-file)
-* [Technical Requirements for the CSS](#technical-requirements-for-the-css)
-* [How do you know you are "done"? How will you be graded?](#how-do-you-know-you-are-done-how-will-you-be-graded)
+- [Summary](#summary)
+- [Extending the HTML](#extending-the-html)
+- [Add CSS for the new HTML](#add-css-for-the-new-html)
+- [Create a new CSS file](#create-a-new-css-file)
+- [Technical Requirements for the CSS](#technical-requirements-for-the-css)
+- [How do you know you are "done"? How will you be graded?](#how-do-you-know-you-are-done-how-will-you-be-graded)
 
 ## Summary
 

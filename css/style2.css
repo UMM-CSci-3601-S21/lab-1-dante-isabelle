@@ -8,5 +8,39 @@ use float to make something locate itself on the right or left
 
 body {
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #A9A9A9;
 }
+
+#main-title{
+  color: white;
+  text-align: center;
+  background-color: navy;
+  font-family: monospace;
+  font-size: 100px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  background-color: navy;
+  font-family: monospace;
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white
+}
+
+li {
+  color: black;
+  text-align: left;
+  background-color: white;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+
