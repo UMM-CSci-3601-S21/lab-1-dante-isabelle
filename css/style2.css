@@ -8,22 +8,15 @@ use float to make something locate itself on the right or left
 
 
 
-/** things to add
-font
-fix the color
-make sure the zoom works and looks different on different browsers
-Your CSS file must include **5 CSS rules with comments** that describe
-  the impact of the rule and how it differs from our original style sheet.
-  your CSS you must use _and point out in comments somewhere_ in your edited style
-  files at least one example of each of the following: **grouping, nesting, a class, and an id**.
-*/
+
 
 body {
   padding: 30px;
   background-color: #333131;
 }
 /** navigation bar*/
-#style-selector ul {
+#style-selector ul/** this is an example of a rule using nesting. the rule uses an id or class. it also used some like li, a, p, and h1-h5 to showcase that it is selecting information within that id or class */
+{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -51,7 +44,8 @@ body {
 #style-selector li a:hover {
   background-color: rgb(178, 120, 184);
 }
-#main-title{
+
+#main-title /** this is an example of a rule using an id. the # is used to select anything that has that id.*/{
   color: white;
   text-align: center;
   background-color: rgb(178, 120, 184);
@@ -64,13 +58,26 @@ body {
 }
 
 
+/** rule one - rule one selects pslo, which is a selector. The display is set to flex expands items to fill available space or
+shrinks to prevent overflow. The position is relative and margin is set to 0 auto. The 0 auto means that the browser is told to automatically
+determine the margins itself. Relative means that it remains in the natural flow of the page.
 
-#pslo{
+The previous style sheet seems to only have a rule involving pslo with background color and font.
+*/
+
+
+#pslo {
   display:flex;
   position: relative;
   margin: 0 auto;
-
 }
+
+/** rule two - rule two selects header 2 inside the id pslo. The color is set to white and the background set to purple. The content and the
+box are centered. The font is monospace with size 50. The margin and padding are set to 50. The box has a white border with the
+text centered. The width and height are reduced to 25 percent.
+
+The previous style sheet seems to only have a rule involving pslo with background color and font.*/
+
 #pslo > h2{
   color: white;
   justify-content: center;
@@ -86,6 +93,13 @@ body {
   width:25%;
   height:25%;
 }
+
+/** rule three - rule three selects any of the ol bullet points inside pslo. The color is white and background purple. The content and text
+are centered. The font is monspace with size 35. The margin and padding are set to 20. The boxs has a white border. The width is
+reduced to 75 percent. The list is brought inside, so that way it doesn't appear outside the box. The text is place in a column direction.
+The text is also left aligned with a grow of 1.
+
+The previous style sheet seems to only have a rule involving pslo with background color and font.*/
 #pslo > ol{
   color: white;
   justify-content: center;
@@ -185,10 +199,10 @@ body {
 
 
 
-.resourceheading{
+.resourceheading /** this is an example of a rule using a class. the # is used for any select anything that has that class*/{
   background-color: #4d1474;
   font-family: monospace;
-  font-size: 70px;
+  font-size: 50px;
   margin: 20px;
   padding: 20px;
   line-height: 1.5;
@@ -201,6 +215,13 @@ body {
   align-items: center;
   vertical-align: middle;
 }
+/**rule five - rule five creates and customizes the text under class= "resources". The color of the box is rgb(25,2,61)
+(purple) and has a white border. For background behind the different classes within the list of links, there is a
+different color to organize which are version-control, ide, and testing.
+
+The previous style sheet doesn't have any rules involving resources because it is a html that we created and used in the style
+2 css.*/
+
 .resources{
   color: white;
   justify-content: center;
@@ -217,12 +238,12 @@ body {
   display:flex;
   justify-content: space-around;
 }
-.Local{
-  font-size: 60px;
+
+
+.Cloud , .Local{
+  font-size: 60px; /** this is an example of a rule using a grouping. the "," is used to showcase that different selectors are being given the same property.*/
 }
-.Cloud{
-  font-size: 60px;
-}
+
 ul{
   font-size: 50px;
 }
@@ -233,7 +254,8 @@ ul{
 .local{
  color:rgb(255, 255, 255);
 }
-.version-control{
+
+.version-control {
  background-color: rgb(46, 58, 50);
 }
 .ide{
@@ -258,6 +280,11 @@ ul{
   width:25%;
   height:25%;
 }
+/**rule four - rule four creates and customizes the box that holds the information under the id= "validation"
+the color of text is white with the font monospace and has been centered. The color of the box is rgb(25, 3,61)
+(purple) and has a white border. The text is centered and bullet points are brought inside the box.
+
+The previous style sheet only had a rule involving validation with font, background, and padding. */
 
 #validation{
   color: white;
