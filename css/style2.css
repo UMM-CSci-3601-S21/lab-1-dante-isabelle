@@ -6,41 +6,272 @@ use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
 */
 
+
+
+/** things to add
+font
+fix the color
+make sure the zoom works and looks different on different browsers
+Your CSS file must include **5 CSS rules with comments** that describe
+  the impact of the rule and how it differs from our original style sheet.
+  your CSS you must use _and point out in comments somewhere_ in your edited style
+  files at least one example of each of the following: **grouping, nesting, a class, and an id**.
+*/
+
 body {
   padding: 30px;
-  background-color: #A9A9A9;
+  background-color: #333131;
 }
-
+/** navigation bar*/
+#style-selector ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #281733 ;
+  width: 80px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 7px solid rgb(95, 106, 167);
+  font-size:30px;
+}
+#style-selector li {
+  float: left; /*explore what happens if this is 'right' instead*/
+}
+#style-selector li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px; /*this adds some spacing around the items in our "nav bar" */
+  text-decoration: none;
+}
+/* Change the link background color to #000 (black) on hover */
+#style-selector li a:hover {
+  background-color: rgb(178, 120, 184);
+}
 #main-title{
   color: white;
   text-align: center;
-  background-color: navy;
+  background-color: rgb(178, 120, 184);
   font-family: monospace;
   font-size: 100px;
   margin: 20px;
   padding: 20px;
   line-height: 1.5;
-  border: 8px solid white
+  border: 8px solid white;
 }
 
-h2 {
+
+
+#pslo{
+  display:flex;
+  position: relative;
+  margin: 0 auto;
+
+}
+#pslo > h2{
   color: white;
-  text-align: center;
-  background-color: navy;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
   font-family: monospace;
-  font-size: 20px;
+  font-size: 50px;
   margin: 20px;
   padding: 20px;
   line-height: 1.5;
-  border: 8px solid white
+  border: 8px solid white;
+  text-align: center;
+  width:25%;
+  height:25%;
 }
-
-li {
-  color: black;
-  text-align: left;
-  background-color: white;
+#pslo > ol{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  #4d1474;
   font-family: monospace;
-  font-size: 20px;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-flow: column wrap;
+  flex-grow: 1;
+  text-align: left;
+  list-style-position:inside;
+  width: 75%;
+
+}
+#courses{
+  display:flex;
+  position: relative;
+  margin: 0 auto;
+
+}
+#courses > h2{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  text-align: center;
+  width:25%;
+  height:25%;
+}
+#courses > ul{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  #4d1474;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-flow: column wrap;
+  flex-grow: 1;
+  text-align: left;
+  list-style-position:inside;
+  width: 75%;
+}
+#faculty{
+  display:flex;
+  position: relative;
+  margin: 0 auto;
+
+}
+#faculty > h2{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  text-align: center;
+  width:25%;
+  height:25%;
+}
+#faculty > ul{
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #4d1474;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  text-align: center;
+  list-style-position:inside;
+  width: 75%;
+  display: flex;
 }
 
 
+
+
+.resourceheading{
+  background-color: #4d1474;
+  font-family: monospace;
+  font-size: 70px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  width:25%;
+  height:25%;
+  display:inline-block;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.resources{
+  color: white;
+  justify-content: center;
+  align-items: baseline;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-grow: 1;
+  list-style-position:inside;
+  flex-shrink: 5;
+  display:flex;
+  justify-content: space-around;
+}
+.Local{
+  font-size: 60px;
+}
+.Cloud{
+  font-size: 60px;
+}
+ul{
+  font-size: 50px;
+}
+
+.cloud{
+ color:rgb(85, 0, 255)
+}
+.local{
+ color:rgb(255, 255, 255);
+}
+.version-control{
+ background-color: rgb(46, 58, 50);
+}
+.ide{
+  background-color: rgb(66, 53, 68);
+}
+.testing{
+  background-color: rgb(41, 41, 51);
+}
+
+
+
+
+
+.card-title{
+  background-color: #4d1474;
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  width:25%;
+  height:25%;
+}
+
+#validation{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-grow: 1;
+  text-align: center;
+  list-style-position:inside;
+  display:flex
+}
