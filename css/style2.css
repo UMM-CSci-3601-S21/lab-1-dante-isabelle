@@ -6,7 +6,299 @@ use , to separate a list of things that have some shared css rule
 use float to make something locate itself on the right or left
 */
 
+
+
+
+
 body {
   padding: 30px;
-  background-color: #ffffff;
+  background-color: #333131;
+}
+/** navigation bar*/
+#style-selector ul/** this is an example of a rule using nesting. the rule uses an id or class. it also used some like li, a, p, and h1-h5 to showcase that it is selecting information within that id or class */
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #281733 ;
+  width: 80px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 7px solid rgb(95, 106, 167);
+  font-size:30px;
+}
+#style-selector li {
+  float: left; /*explore what happens if this is 'right' instead*/
+}
+#style-selector li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px; /*this adds some spacing around the items in our "nav bar" */
+  text-decoration: none;
+}
+/* Change the link background color to #000 (black) on hover */
+#style-selector li a:hover {
+  background-color: rgb(178, 120, 184);
+}
+
+#main-title /** this is an example of a rule using an id. the # is used to select anything that has that id.*/{
+  color: white;
+  text-align: center;
+  background-color: rgb(178, 120, 184);
+  font-family: monospace;
+  font-size: 100px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+}
+
+
+/** rule one - rule one selects pslo, which is a selector. The display is set to flex expands items to fill available space or
+shrinks to prevent overflow. The position is relative and margin is set to 0 auto. The 0 auto means that the browser is told to automatically
+determine the margins itself. Relative means that it remains in the natural flow of the page.
+
+The previous style sheet seems to only have a rule involving pslo with background color and font.
+*/
+
+
+#pslo {
+  display:flex;
+  position: relative;
+  margin: 0 auto;
+}
+
+/** rule two - rule two selects header 2 inside the id pslo. The color is set to white and the background set to purple. The content and the
+box are centered. The font is monospace with size 50. The margin and padding are set to 50. The box has a white border with the
+text centered. The width and height are reduced to 25 percent.
+
+The previous style sheet seems to only have a rule involving pslo with background color and font.*/
+
+#pslo > h2{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  text-align: center;
+  width:25%;
+  height:25%;
+}
+
+/** rule three - rule three selects any of the ol bullet points inside pslo. The color is white and background purple. The content and text
+are centered. The font is monspace with size 35. The margin and padding are set to 20. The boxs has a white border. The width is
+reduced to 75 percent. The list is brought inside, so that way it doesn't appear outside the box. The text is place in a column direction.
+The text is also left aligned with a grow of 1.
+
+The previous style sheet seems to only have a rule involving pslo with background color and font.*/
+#pslo > ol{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  #4d1474;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-flow: column wrap;
+  flex-grow: 1;
+  text-align: left;
+  list-style-position:inside;
+  width: 75%;
+
+}
+#courses{
+  display:flex;
+  position: relative;
+  margin: 0 auto;
+
+}
+#courses > h2{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  text-align: center;
+  width:25%;
+  height:25%;
+}
+#courses > ul{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  #4d1474;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-flow: column wrap;
+  flex-grow: 1;
+  text-align: left;
+  list-style-position:inside;
+  width: 75%;
+}
+#faculty{
+  display:flex;
+  position: relative;
+  margin: 0 auto;
+
+}
+#faculty > h2{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  text-align: center;
+  width:25%;
+  height:25%;
+}
+#faculty > ul{
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #4d1474;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  text-align: center;
+  list-style-position:inside;
+  width: 75%;
+  display: flex;
+}
+
+
+
+
+.resourceheading /** this is an example of a rule using a class. the # is used for any select anything that has that class*/{
+  background-color: #4d1474;
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  width:25%;
+  height:25%;
+  display:inline-block;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+/**rule five - rule five creates and customizes the text under class= "resources". The color of the box is rgb(25,2,61)
+(purple) and has a white border. For background behind the different classes within the list of links, there is a
+different color to organize which are version-control, ide, and testing.
+
+The previous style sheet doesn't have any rules involving resources because it is a html that we created and used in the style
+2 css.*/
+
+.resources{
+  color: white;
+  justify-content: center;
+  align-items: baseline;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-grow: 1;
+  list-style-position:inside;
+  flex-shrink: 5;
+  display:flex;
+  justify-content: space-around;
+}
+
+
+.Cloud , .Local{
+  font-size: 60px; /** this is an example of a rule using a grouping. the "," is used to showcase that different selectors are being given the same property.*/
+}
+
+ul{
+  font-size: 50px;
+}
+
+.cloud{
+ color:rgb(85, 0, 255)
+}
+.local{
+ color:rgb(255, 255, 255);
+}
+
+.version-control {
+ background-color: rgb(46, 58, 50);
+}
+.ide{
+  background-color: rgb(66, 53, 68);
+}
+.testing{
+  background-color: rgb(41, 41, 51);
+}
+
+
+
+
+
+.card-title{
+  background-color: #4d1474;
+  font-family: monospace;
+  font-size: 50px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  width:25%;
+  height:25%;
+}
+/**rule four - rule four creates and customizes the box that holds the information under the id= "validation"
+the color of text is white with the font monospace and has been centered. The color of the box is rgb(25, 3,61)
+(purple) and has a white border. The text is centered and bullet points are brought inside the box.
+
+The previous style sheet only had a rule involving validation with font, background, and padding. */
+
+#validation{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color:  rgb(25, 3, 61);
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  border: 8px solid white;
+  flex-grow: 1;
+  text-align: center;
+  list-style-position:inside;
+  display:flex
 }
